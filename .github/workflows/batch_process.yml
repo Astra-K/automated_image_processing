@@ -1,0 +1,58 @@
+name: Batch Image Classification
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 3 AM UTC daily
+  workflow_dispatch:
+
+env:
+  SOURCE_DIR: data/pre_batch
+  PROCESSED_DIR: images/post_batch
+
+jobs:
+  classify-images:
+    name: Batch Process Images
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Prepare directories
+        run: |
+          mkdir -p ${{ env.PROCESSED_DIR }}
+          echo "Directories ready"
+      
+      - name: Run batch classification
+        run: python batch_predict.py
+        env:
+          SOURCE: ${{ env.SOURCE_DIR }}
+          PROCESSED: ${{ env.PROCESSED_DIR }}
+      
+      - name: Commit results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add ${{ env.PROCESSED_DIR }}
+          git add predictions/predictions.json
+          
+          git commit -m "Batch processed $(date +%Y-%m-%d)" || echo "No changes"
+          git push
+      
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Batch Processing Complete" >> $GITHUB_STEP_SUMMARY
+          echo "- Time: $(date)" >> $GITHUB_STEP_SUMMARY
