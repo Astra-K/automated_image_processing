@@ -1,0 +1,440 @@
+[
+  {
+    "predictions": [
+      {
+        "class": "BABY_PRODUCTS",
+        "percentage": "81.33%"
+      },
+      {
+        "class": "GROCERY",
+        "percentage": "9.27%"
+      },
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "4.39%"
+      }
+    ],
+    "top_class": "BABY_PRODUCTS",
+    "top_confidence": 0.8133013248443604,
+    "file_path": "17626_BABY_P_check.jpeg",
+    "timestamp": "2026-01-07T16:52:04.456359"
+  },
+  {
+    "predictions": [
+      {
+        "class": "GROCERY",
+        "percentage": "47.67%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "28.67%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "15.19%"
+      }
+    ],
+    "top_class": "GROCERY",
+    "top_confidence": 0.4766741394996643,
+    "file_path": "17984_HOBBY__check.jpeg",
+    "full_path": "/Users/ansgarkamratowski/Desktop/Model_Engeneering/Data/ECOMMERCE_PRODUCT_IMAGES/check/HOBBY_ARTS_STATIONERY/17984_HOBBY__check.jpeg",
+    "timestamp": "2026-01-07T17:05:01.836120",
+    "batch_index": 0
+  },
+  {
+    "predictions": [
+      {
+        "class": "GROCERY",
+        "percentage": "91.82%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "3.05%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "1.42%"
+      }
+    ],
+    "top_class": "GROCERY",
+    "top_confidence": 0.9181999564170837,
+    "file_path": "17970_HOBBY__check.jpeg",
+    "full_path": "/Users/ansgarkamratowski/Desktop/Model_Engeneering/Data/ECOMMERCE_PRODUCT_IMAGES/check/HOBBY_ARTS_STATIONERY/17970_HOBBY__check.jpeg",
+    "timestamp": "2026-01-07T17:05:01.914882",
+    "batch_index": 1
+  },
+  {
+    "predictions": [
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "59.98%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "20.71%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "7.73%"
+      }
+    ],
+    "top_class": "PET_SUPPLIES",
+    "top_confidence": 0.5998245477676392,
+    "file_path": "18145_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18145_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.088924",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "CLOTHING_ACCESSORIES_JEWELLERY",
+        "percentage": "81.16%"
+      },
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "14.89%"
+      },
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "2.77%"
+      }
+    ],
+    "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
+    "top_confidence": 0.8115959763526917,
+    "file_path": "18140_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18140_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.230884",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "97.40%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "1.11%"
+      },
+      {
+        "class": "CLOTHING_ACCESSORIES_JEWELLERY",
+        "percentage": "0.80%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9739673137664795,
+    "file_path": "18144_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18144_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.289426",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "99.22%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "0.38%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "0.21%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9922212958335876,
+    "file_path": "18141_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18141_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.354266",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "33.65%"
+      },
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "23.52%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "22.19%"
+      }
+    ],
+    "top_class": "HOBBY_ARTS_STATIONERY",
+    "top_confidence": 0.3365328311920166,
+    "file_path": "18142_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18142_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.417977",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "93.12%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "3.64%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "3.07%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9311791062355042,
+    "file_path": "18138_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18138_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.481008",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "47.98%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "35.77%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "10.11%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.47981810569763184,
+    "file_path": "18143_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18143_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.538483",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "50.65%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "30.41%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "13.46%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.5064817667007446,
+    "file_path": "18139_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18139_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.591079",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "60.14%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "18.41%"
+      },
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "15.17%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.601421594619751,
+    "file_path": "18130_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18130_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.645028",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "ELECTRONICS",
+        "percentage": "44.66%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "29.54%"
+      },
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "19.61%"
+      }
+    ],
+    "top_class": "ELECTRONICS",
+    "top_confidence": 0.4466005563735962,
+    "file_path": "18129_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18129_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.697734",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "36.79%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "21.36%"
+      },
+      {
+        "class": "GROCERY",
+        "percentage": "20.35%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.36794403195381165,
+    "file_path": "18135_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18135_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.753987",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "93.88%"
+      },
+      {
+        "class": "BEAUTY_HEALTH",
+        "percentage": "2.92%"
+      },
+      {
+        "class": "CLOTHING_ACCESSORIES_JEWELLERY",
+        "percentage": "0.84%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.938831627368927,
+    "file_path": "18131_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18131_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.809683",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "99.37%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "0.49%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "0.06%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9937341809272766,
+    "file_path": "18134_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18134_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.863206",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "79.32%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "12.50%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "3.39%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.7931507229804993,
+    "file_path": "18132_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18132_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.918098",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "92.15%"
+      },
+      {
+        "class": "HOME_KITCHEN_TOOLS",
+        "percentage": "3.20%"
+      },
+      {
+        "class": "PET_SUPPLIES",
+        "percentage": "2.53%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9215096235275269,
+    "file_path": "18137_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18137_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:08.970532",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "BABY_PRODUCTS",
+        "percentage": "52.08%"
+      },
+      {
+        "class": "CLOTHING_ACCESSORIES_JEWELLERY",
+        "percentage": "24.37%"
+      },
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "14.92%"
+      }
+    ],
+    "top_class": "BABY_PRODUCTS",
+    "top_confidence": 0.5207871198654175,
+    "file_path": "18133_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18133_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:09.025464",
+    "source": "batch"
+  },
+  {
+    "predictions": [
+      {
+        "class": "SPORTS_OUTDOOR",
+        "percentage": "98.69%"
+      },
+      {
+        "class": "HOBBY_ARTS_STATIONERY",
+        "percentage": "0.76%"
+      },
+      {
+        "class": "ELECTRONICS",
+        "percentage": "0.31%"
+      }
+    ],
+    "top_class": "SPORTS_OUTDOOR",
+    "top_confidence": 0.9869481325149536,
+    "file_path": "18136_SPORTS_check.jpeg",
+    "full_path": "Data/pre_batch/18136_SPORTS_check.jpeg",
+    "timestamp": "2026-01-08T11:46:09.078915",
+    "source": "batch"
+  }
+]
