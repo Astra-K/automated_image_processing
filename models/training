@@ -1,0 +1,271 @@
+# train_model.py
+import os
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from keras import layers
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import kagglehub
+
+
+# Configuration
+IMAGE_SIZE = (224, 224)
+BATCH_SIZE = 128
+EPOCHS = 3
+LEARNING_RATE = 0.001
+NUM_CLASSES = 9
+
+# Your 9 classes - REPLACE WITH YOUR ACTUAL CLASSES
+CLASSES = [
+    'BABY_PRODUCTS', 'BEAUTY_HEALTH', 'CLOTHING_ACCESSORIES_JEWELLERY', 
+    'ELECTRONICS', 'GROCERY', 'HOBBY_ARTS_STATIONERY',
+    'HOME_KITCHEN_TOOLS', 'PET_SUPPLIES', 'SPORTS_OUTDOOR'
+]
+
+
+# ============= MODEL ARCHITECTURES =============
+
+def create_regular_cnn(input_shape=(224, 224, 3), num_classes=9):
+    """Standard CNN - RECOMMENDED for most cases"""
+    model = keras.Sequential([
+        # Data augmentation
+        layers.RandomFlip("horizontal"),
+        layers.RandomRotation(0.1),
+        layers.RandomZoom(0.1),
+        
+        # Normalization
+        layers.Rescaling(1./255),
+        
+        # Conv Block 1
+        layers.Conv2D(32, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.Conv2D(32, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.MaxPooling2D(2),
+        layers.Dropout(0.25),
+        
+        # Conv Block 2
+        layers.Conv2D(64, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.Conv2D(64, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.MaxPooling2D(2),
+        layers.Dropout(0.25),
+        
+        # Conv Block 3
+        layers.Conv2D(128, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.Conv2D(128, 3, padding='same', activation='gelu'),
+        layers.BatchNormalization(),
+        layers.MaxPooling2D(2),
+        layers.Dropout(0.4),
+        
+        # Dense layers
+        layers.GlobalAveragePooling2D(),
+        layers.Dense(256, activation='gelu'),
+        layers.BatchNormalization(),
+        layers.Dropout(0.5),
+        layers.Dense(num_classes, activation='softmax')
+    ])
+    
+    return model
+
+def create_dilated_cnn(input_shape=(224, 224, 3), num_classes=9):
+    """Dilated CNN - if you specifically need it"""
+    inputs = layers.Input(shape=input_shape)
+    
+    # Preprocessing
+    x = layers.RandomFlip("horizontal")(inputs)
+    x = layers.RandomRotation(0.1)(x)
+    x = layers.Rescaling(1./255)(x)
+    
+    # Initial conv
+    x = layers.Conv2D(32, 3, padding='same', activation='gelu')(x)
+    x = layers.BatchNormalization()(x)
+    
+    # Dilated convolutions with increasing dilation rates
+    # This captures features at different scales
+    for filters in [64, 128, 256]:
+        # Branch 1: Regular convolution
+        conv1 = layers.Conv2D(filters, 3, padding='same', activation='gelu')(x)
+        
+        # Branch 2: Dilated rate 2
+        conv2 = layers.Conv2D(filters, 3, padding='same', 
+                             dilation_rate=2, activation='gelu')(x)
+        
+        # Branch 3: Dilated rate 4
+        conv3 = layers.Conv2D(filters, 3, padding='same', 
+                             dilation_rate=4, activation='gelu')(x)
+        
+        # Concatenate multi-scale features
+        x = layers.Concatenate()([conv1, conv2, conv3])
+        x = layers.BatchNormalization()(x)
+        x = layers.MaxPooling2D(2)(x)
+        x = layers.Dropout(0.25)(x)
+    
+    # Classification head
+    x = layers.GlobalAveragePooling2D()(x)
+    x = layers.Dense(256, activation='gelu')(x)
+    x = layers.BatchNormalization()(x)
+    x = layers.Dropout(0.5)(x)
+    outputs = layers.Dense(num_classes, activation='softmax')(x)
+    
+    model = keras.Model(inputs, outputs)
+    return model
+
+def create_simple_efficient_model(input_shape=(224, 224, 3), num_classes=9):
+    """Lightweight model - trains faster, good baseline"""
+    model = keras.Sequential([
+        layers.Rescaling(1./255),
+        
+        layers.Conv2D(32, 3, padding='same', activation='gelu'),
+        layers.MaxPooling2D(2),
+        
+        layers.Conv2D(64, 3, padding='same', activation='gelu'),
+        layers.MaxPooling2D(2),
+        
+        layers.Conv2D(128, 3, padding='same', activation='gelu'),
+        layers.MaxPooling2D(2),
+        
+        layers.Flatten(),
+        layers.Dense(128, activation='gelu'),
+        layers.Dropout(0.5),
+        layers.Dense(num_classes, activation='softmax')
+    ])
+    return model
+
+# ============= TRAINING =============
+
+def train_model(model, train_ds, val_ds, model_name='model'):
+    """Train the model with callbacks"""
+    
+    # Compile
+    model.compile(
+        optimizer=keras.optimizers.Adam(learning_rate=LEARNING_RATE),
+        loss='categorical_crossentropy',
+        metrics=['accuracy', keras.metrics.TopKCategoricalAccuracy(k=3, name='top3_acc')]
+    )
+    
+    # Callbacks
+    callbacks = [
+        # Save best model
+        keras.callbacks.ModelCheckpoint(
+            f'models/{model_name}_best.h5',
+            monitor='val_accuracy',
+            save_best_only=True,
+            mode='max',
+            verbose=1
+        ),
+        
+        # Reduce learning rate when stuck
+        keras.callbacks.ReduceLROnPlateau(
+            monitor='val_loss',
+            factor=0.5,
+            patience=5,
+            min_lr=1e-7,
+            verbose=1
+        ),
+        
+        # Early stopping
+        keras.callbacks.EarlyStopping(
+            monitor='val_loss',
+            patience=10,
+            restore_best_weights=True,
+            verbose=1
+        ),
+        
+        # TensorBoard logs (optional)
+        keras.callbacks.TensorBoard(
+            log_dir=f'logs/{model_name}',
+            histogram_freq=1
+        )
+    ]
+    
+    # Train
+    history = model.fit(
+        train_ds,
+        epochs=EPOCHS,
+        validation_data=val_ds,
+        callbacks=callbacks,
+        verbose=1
+    )
+    
+    return history
+
+# ============= EVALUATION =============
+
+def plot_history(history, model_name='model'):
+    """Plot training curves"""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
+    
+    # Accuracy
+    ax1.plot(history.history['accuracy'], label='Train')
+    ax1.plot(history.history['val_accuracy'], label='Validation')
+    ax1.set_title('Model Accuracy')
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Accuracy')
+    ax1.legend()
+    ax1.grid(True)
+    
+    # Loss
+    ax2.plot(history.history['loss'], label='Train')
+    ax2.plot(history.history['val_loss'], label='Validation')
+    ax2.set_title('Model Loss')
+    ax2.set_xlabel('Epoch')
+    ax2.set_ylabel('Loss')
+    ax2.legend()
+    ax2.grid(True)
+    
+    plt.tight_layout()
+    plt.savefig(f'models/{model_name}_training_curves.png')
+    plt.show()
+
+# ============= MAIN TRAINING SCRIPT =============
+
+if __name__ == "__main__":
+    # Set GPU memory growth (if using GPU)
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+    
+    # Create directories
+    os.makedirs('models', exist_ok=True)
+    os.makedirs('logs', exist_ok=True)
+    
+    # Load data
+    print("Loading dataset...")
+    train_ds, val_ds = load_dataset('data/train')  # Update with your path
+    
+    # Choose model architecture
+    print("\nCreating model...")
+    # Option 1: Regular CNN (RECOMMENDED)
+    model = create_regular_cnn(input_shape=IMAGE_SIZE + (3,), num_classes=NUM_CLASSES)
+    
+    # Option 2: Dilated CNN (if needed)
+    # model = create_dilated_cnn(input_shape=IMAGE_SIZE + (3,), num_classes=NUM_CLASSES)
+    
+    # Option 3: Simple/Fast model for testing
+    # model = create_simple_efficient_model(input_shape=IMAGE_SIZE + (3,), num_classes=NUM_CLASSES)
+    
+    # Print model summary
+    model.summary()
+    
+    # Train
+    print("\nStarting training...")
+    history = train_model(model, train_ds, val_ds, model_name='classifier_9class')
+    
+    # Plot results
+    plot_history(history, 'classifier_9class')
+    
+    # Save final model
+    model.save('models/final_classifier.h5')
+    print("\nTraining complete! Model saved to models/final_classifier.h5")
+    
+    # Evaluate on validation set
+    print("\nFinal Evaluation:")
+    results = model.evaluate(val_ds)
+    print(f"Validation Accuracy: {results[1]:.2%}")
+    print(f"Top-3 Accuracy: {results[2]:.2%}")
