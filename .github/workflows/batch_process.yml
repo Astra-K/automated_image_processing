@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  SOURCE_DIR: data/pre_batch
-  PROCESSED_DIR: images/post_batch
+  SOURCE_DIR: Data/pre_batch
+  PROCESSED_DIR: Data/post_batch
 
 jobs:
   classify-images:
@@ -35,7 +35,7 @@ jobs:
           echo "Directories ready"
       
       - name: Run batch classification
-        run: python batch_predict.py
+        run: python batch_job.py
         env:
           SOURCE: ${{ env.SOURCE_DIR }}
           PROCESSED: ${{ env.PROCESSED_DIR }}
