@@ -46,7 +46,7 @@ jobs:
           git config --local user.name "GitHub Action"
           
           git add ${{ env.PROCESSED_DIR }}
-          git add predictions/predictions.json
+          git add Data/predictions.json
           
           git commit -m "Batch processed $(date +%Y-%m-%d)" || echo "No changes"
           git push
