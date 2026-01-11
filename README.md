@@ -64,6 +64,11 @@ This system helps online shopping platforms automatically categorize returned/re
   - Avoids duplicate predictions for same image
   - Timestamps and metadata for all predictions
 
+- **Dataset Pull**
+  - Source datasets can be automatically loaded into the Data folder using Kaggle
+  - Check, val and train datasets are made available through python script
+  - Check can be used to test automated batch processing and REST API
+
 ## Quick Start
 
 ### Prerequisites
