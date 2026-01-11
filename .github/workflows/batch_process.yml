@@ -35,7 +35,7 @@ jobs:
           echo "Directories ready"
       
       - name: Run batch classification
-        run: python batch_job.py
+        run: python scr/batch_job.py
         env:
           SOURCE: ${{ env.SOURCE_DIR }}
           PROCESSED: ${{ env.PROCESSED_DIR }}
