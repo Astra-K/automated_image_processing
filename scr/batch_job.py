@@ -32,7 +32,6 @@ def main():
     
     # Parse arguments
     parser = argparse.ArgumentParser(description='Batch image classification')
-    parser.add_argument('--batch-size', type=int, default=10, help='Batch size')
     parser.add_argument('--source-dir', default='Data/pre_batch', help='Source image directory')
     parser.add_argument('--output-dir', default='Data/post_batch', help='Output directory for processed images')
     
