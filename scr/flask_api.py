@@ -209,23 +209,39 @@ def predict():
     -d '{"file_path": "link_to_image_in_directory"}' 
     """
     try:
-        if not request.json or 'file_path' not in request.json:
-                    return jsonify({'error': 'No file_path provided'}), 400
-        file_path = request.json['file_path']
-        filename = os.path.basename(file_path)
-        logger.info(f"Processing prediction for: {filename}")
+        if not request.json:
+            return jsonify({'error': 'No JSON data provided'}), 400
+                
+        if 'file_path' in request.json:
+            file_path = request.json['file_path']
+            logger.info(f"Loading from file path: {file_path}")
+            img_array = preprocess_image(file_path)
+            filename = os.path.basename(file_path)
         
-        # Preprocess the file object
-        img_array = preprocess_image(file_path)
-        
+        # Option 2: Serialised base64 image (NEW)
+        elif 'image' in request.json:
+            image_data = request.json['image']
+            logger.info("Loading from base64 serialized data")
+            
+            # Decode base64 to bytes
+            image_bytes = base64.b64decode(image_data)
+            
+            # Convert to PIL Image
+            img = Image.open(io.BytesIO(image_bytes))
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
+            img = img.resize(IMG_SIZE)
+            
+            img_array = np.array(img, dtype='float32') / 255.0
+            img_array = np.expand_dims(img_array, axis=0)
+            
+            filename = request.json.get('filename', 'serialized_image')
+
         # Make prediction
         result = predict_image(img_array)
-        
-        # Add metadata
         result['file_path'] = filename
         result['timestamp'] = datetime.utcnow().isoformat()
         
-        # Save to local file
         save_prediction(result)
         
         logger.info(f"Prediction: {result['top_class']} ({result['top_confidence']:.2%})")
