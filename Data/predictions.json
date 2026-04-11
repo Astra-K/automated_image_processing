@@ -15,10 +15,10 @@
       }
     ],
     "top_class": "BABY_PRODUCTS",
-    "top_confidence": 0.8133017420768738,
+    "top_confidence": 0.8133014440536499,
     "file_path": "17626_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17626_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.009195",
+    "timestamp": "2026-04-11T04:48:26.924602",
     "source": "batch"
   },
   {
@@ -458,7 +458,7 @@
     "top_confidence": 0.9759534597396851,
     "file_path": "17815_GROCER_check.jpeg",
     "full_path": "Data/pre_batch/17815_GROCER_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.602117",
+    "timestamp": "2026-04-11T04:48:27.515598",
     "source": "batch"
   },
   {
@@ -477,10 +477,10 @@
       }
     ],
     "top_class": "HOME_KITCHEN_TOOLS",
-    "top_confidence": 0.8470113277435303,
+    "top_confidence": 0.8470114469528198,
     "file_path": "17633_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17633_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.075172",
+    "timestamp": "2026-04-11T04:48:26.990417",
     "source": "batch"
   },
   {
@@ -499,10 +499,10 @@
       }
     ],
     "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
-    "top_confidence": 0.7696482539176941,
+    "top_confidence": 0.7696487307548523,
     "file_path": "17718_CLOTHI_check.jpeg",
     "full_path": "Data/pre_batch/17718_CLOTHI_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.407168",
+    "timestamp": "2026-04-11T04:48:26.321493",
     "source": "batch"
   },
   {
@@ -521,10 +521,10 @@
       }
     ],
     "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
-    "top_confidence": 0.8713816404342651,
+    "top_confidence": 0.8713818192481995,
     "file_path": "17719_CLOTHI_check.jpeg",
     "full_path": "Data/pre_batch/17719_CLOTHI_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.943314",
+    "timestamp": "2026-04-11T04:48:26.856545",
     "source": "batch"
   },
   {
@@ -543,10 +543,10 @@
       }
     ],
     "top_class": "HOBBY_ARTS_STATIONERY",
-    "top_confidence": 0.8340716361999512,
+    "top_confidence": 0.8340715765953064,
     "file_path": "18018_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18018_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.867790",
+    "timestamp": "2026-04-11T04:48:27.783067",
     "source": "batch"
   },
   {
@@ -568,7 +568,7 @@
     "top_confidence": 0.9702061414718628,
     "file_path": "17814_GROCER_check.jpeg",
     "full_path": "Data/pre_batch/17814_GROCER_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.540349",
+    "timestamp": "2026-04-11T04:48:26.452831",
     "source": "batch"
   },
   {
@@ -587,10 +587,10 @@
       }
     ],
     "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
-    "top_confidence": 0.6336045861244202,
+    "top_confidence": 0.6336047649383545,
     "file_path": "17720_CLOTHI_check.jpeg",
     "full_path": "Data/pre_batch/17720_CLOTHI_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.808071",
+    "timestamp": "2026-04-11T04:48:26.722217",
     "source": "batch"
   },
   {
@@ -612,7 +612,7 @@
     "top_confidence": 0.9781731963157654,
     "file_path": "17716_CLOTHI_check.jpeg",
     "full_path": "Data/pre_batch/17716_CLOTHI_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.671129",
+    "timestamp": "2026-04-11T04:48:27.582209",
     "source": "batch"
   },
   {
@@ -634,14 +634,14 @@
     "top_confidence": 0.9751996397972107,
     "file_path": "17811_GROCER_check.jpeg",
     "full_path": "Data/pre_batch/17811_GROCER_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.741563",
+    "timestamp": "2026-04-11T04:48:26.656356",
     "source": "batch"
   },
   {
     "predictions": [
       {
         "class": "HOME_KITCHEN_TOOLS",
-        "percentage": "47.48%"
+        "percentage": "47.49%"
       },
       {
         "class": "GROCERY",
@@ -653,10 +653,10 @@
       }
     ],
     "top_class": "HOME_KITCHEN_TOOLS",
-    "top_confidence": 0.4748499393463135,
+    "top_confidence": 0.4748501479625702,
     "file_path": "18013_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18013_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.737431",
+    "timestamp": "2026-04-11T04:48:27.650438",
     "source": "batch"
   },
   {
@@ -678,7 +678,7 @@
     "top_confidence": 0.9289311766624451,
     "file_path": "18010_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18010_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.471276",
+    "timestamp": "2026-04-11T04:48:27.385176",
     "source": "batch"
   },
   {
@@ -697,10 +697,10 @@
       }
     ],
     "top_class": "BABY_PRODUCTS",
-    "top_confidence": 0.518048882484436,
+    "top_confidence": 0.5180484056472778,
     "file_path": "17630_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17630_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.675376",
+    "timestamp": "2026-04-11T04:48:26.588749",
     "source": "batch"
   },
   {
@@ -719,10 +719,10 @@
       }
     ],
     "top_class": "HOME_KITCHEN_TOOLS",
-    "top_confidence": 0.5470174551010132,
+    "top_confidence": 0.547017514705658,
     "file_path": "18017_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18017_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.406075",
+    "timestamp": "2026-04-11T04:48:27.319773",
     "source": "batch"
   },
   {
@@ -741,10 +741,10 @@
       }
     ],
     "top_class": "HOBBY_ARTS_STATIONERY",
-    "top_confidence": 0.8561913371086121,
+    "top_confidence": 0.8561913967132568,
     "file_path": "17625_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17625_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.473794",
+    "timestamp": "2026-04-11T04:48:26.388002",
     "source": "batch"
   },
   {
@@ -763,10 +763,10 @@
       }
     ],
     "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
-    "top_confidence": 0.9723848104476929,
+    "top_confidence": 0.9723846912384033,
     "file_path": "17717_CLOTHI_check.jpeg",
     "full_path": "Data/pre_batch/17717_CLOTHI_check.jpeg",
-    "timestamp": "2026-04-10T05:16:53.064638",
+    "timestamp": "2026-04-11T04:48:27.980007",
     "source": "batch"
   },
   {
@@ -785,10 +785,10 @@
       }
     ],
     "top_class": "GROCERY",
-    "top_confidence": 0.8772996068000793,
+    "top_confidence": 0.8772997856140137,
     "file_path": "17628_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17628_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.999938",
+    "timestamp": "2026-04-11T04:48:27.914879",
     "source": "batch"
   },
   {
@@ -807,10 +807,10 @@
       }
     ],
     "top_class": "ELECTRONICS",
-    "top_confidence": 0.39990538358688354,
+    "top_confidence": 0.39990541338920593,
     "file_path": "18014_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18014_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.275304",
+    "timestamp": "2026-04-11T04:48:27.188185",
     "source": "batch"
   },
   {
@@ -832,7 +832,7 @@
     "top_confidence": 0.9102219343185425,
     "file_path": "17632_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17632_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.271522",
+    "timestamp": "2026-04-11T04:48:26.184621",
     "source": "batch"
   },
   {
@@ -851,10 +851,10 @@
       }
     ],
     "top_class": "GROCERY",
-    "top_confidence": 0.8189221024513245,
+    "top_confidence": 0.8189228177070618,
     "file_path": "18011_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18011_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.803019",
+    "timestamp": "2026-04-11T04:48:27.717003",
     "source": "batch"
   },
   {
@@ -873,10 +873,10 @@
       }
     ],
     "top_class": "GROCERY",
-    "top_confidence": 0.8631777167320251,
+    "top_confidence": 0.8631773591041565,
     "file_path": "17812_GROCER_check.jpeg",
     "full_path": "Data/pre_batch/17812_GROCER_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.143829",
+    "timestamp": "2026-04-11T04:48:27.055326",
     "source": "batch"
   },
   {
@@ -895,10 +895,10 @@
       }
     ],
     "top_class": "GROCERY",
-    "top_confidence": 0.9913133978843689,
+    "top_confidence": 0.991313636302948,
     "file_path": "17813_GROCER_check.jpeg",
     "full_path": "Data/pre_batch/17813_GROCER_check.jpeg",
-    "timestamp": "2026-04-10T05:16:53.130612",
+    "timestamp": "2026-04-11T04:48:28.045867",
     "source": "batch"
   },
   {
@@ -920,7 +920,7 @@
     "top_confidence": 0.9797612428665161,
     "file_path": "18016_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18016_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.877008",
+    "timestamp": "2026-04-11T04:48:26.788125",
     "source": "batch"
   },
   {
@@ -939,10 +939,10 @@
       }
     ],
     "top_class": "HOME_KITCHEN_TOOLS",
-    "top_confidence": 0.6397640705108643,
+    "top_confidence": 0.6397638320922852,
     "file_path": "18009_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18009_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.536271",
+    "timestamp": "2026-04-11T04:48:27.450624",
     "source": "batch"
   },
   {
@@ -961,10 +961,10 @@
       }
     ],
     "top_class": "BABY_PRODUCTS",
-    "top_confidence": 0.8129057884216309,
+    "top_confidence": 0.8129061460494995,
     "file_path": "17634_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17634_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.209016",
+    "timestamp": "2026-04-11T04:48:27.123240",
     "source": "batch"
   },
   {
@@ -983,10 +983,10 @@
       }
     ],
     "top_class": "BEAUTY_HEALTH",
-    "top_confidence": 0.4530797600746155,
+    "top_confidence": 0.45307981967926025,
     "file_path": "18012_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18012_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:53.197109",
+    "timestamp": "2026-04-11T04:48:28.110598",
     "source": "batch"
   },
   {
@@ -1005,10 +1005,10 @@
       }
     ],
     "top_class": "BEAUTY_HEALTH",
-    "top_confidence": 0.5315022468566895,
+    "top_confidence": 0.5315020084381104,
     "file_path": "18015_HOME_K_check.jpeg",
     "full_path": "Data/pre_batch/18015_HOME_K_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.340139",
+    "timestamp": "2026-04-11T04:48:26.253133",
     "source": "batch"
   },
   {
@@ -1027,10 +1027,10 @@
       }
     ],
     "top_class": "BABY_PRODUCTS",
-    "top_confidence": 0.3817713260650635,
+    "top_confidence": 0.3817712366580963,
     "file_path": "17631_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17631_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.340822",
+    "timestamp": "2026-04-11T04:48:27.253382",
     "source": "batch"
   },
   {
@@ -1052,7 +1052,7 @@
     "top_confidence": 0.9939297437667847,
     "file_path": "17629_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17629_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:51.608315",
+    "timestamp": "2026-04-11T04:48:26.521787",
     "source": "batch"
   },
   {
@@ -1071,10 +1071,10 @@
       }
     ],
     "top_class": "CLOTHING_ACCESSORIES_JEWELLERY",
-    "top_confidence": 0.3360527455806732,
+    "top_confidence": 0.33605265617370605,
     "file_path": "17627_BABY_P_check.jpeg",
     "full_path": "Data/pre_batch/17627_BABY_P_check.jpeg",
-    "timestamp": "2026-04-10T05:16:52.934017",
+    "timestamp": "2026-04-11T04:48:27.849753",
     "source": "batch"
   }
 ]
